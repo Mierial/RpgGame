@@ -50,7 +50,6 @@ public class EnemyDetection : MonoBehaviour
 
     private void FollowPlayer()
     {
-        Debug.Log("detected");
         _agent.SetDestination(_playerPosition.position);
     }
 
