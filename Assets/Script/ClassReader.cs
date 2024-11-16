@@ -4,18 +4,41 @@ using UnityEngine;
 
 public class ClassReader : MonoBehaviour
 {
-    [SerializeField] private Class ClassCharact; 
-    [SerializeField] public float strenght;
-    [SerializeField] public float intelect;
-    [SerializeField] public float agility;
-    [SerializeField] public float health;
+    MooveMeh moov = FindObjectOfType<MooveMeh>();
+    [SerializeField] private Class ClassCharact;
+    public float strenght;
+    public float intelect;
+    public float agility;
+    public float health;
+    
 
-    [SerializeField] public float buffsternght;
-    [SerializeField] public float buffinelect;
-    [SerializeField] public float buffagility;
+    public float buffsternght;
+    public float buffinelect;
+    public float buffagility;
 
-    [SerializeField] public float defense;
-    [SerializeField] public float damage;
+    public float defense;
+    public float damage;
+
+    public int maxhealth = 1400;
+
+    public float Health
+    {
+
+        get { return health; }
+        set
+        {
+            if (value < 0)
+            {
+                health = 0;
+            }
+            else if (value > maxhealth)
+            {
+                health = maxhealth;
+            }
+            else { health = value; }
+        }
+    }
+
 
     private void Awake()
     {
@@ -29,21 +52,19 @@ public class ClassReader : MonoBehaviour
         UpdateHaracteristic();
     }
 
-    private void UpdateHaracteristic()
+private void UpdateHaracteristic()
     {
         defense = (agility / 3 + strenght / 5)* 1.5f +2;
         damage = (agility / 2 + strenght / 2 + intelect / 3) + 15;
     }
     private void ClaimDamage(int damagemob)
     {
-        health =- (damagemob - defense) ;
+        Health =- (damagemob - defense) ;
+        if (health == 0)
+        {
+            moov.Dead();
+        }
     }
 
-    private void SaveStat() { 
-    }
-
-    private void OnApplicationPause(bool pause)
-    {
-        
-    }
+   
 }
