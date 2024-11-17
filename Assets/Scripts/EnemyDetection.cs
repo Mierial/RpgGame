@@ -24,7 +24,7 @@ public class EnemyDetection : MonoBehaviour
             _nmEnemy.StopPatrol();
             FollowPlayer();
         }
-        else if(_agent.remainingDistance < _agent.stoppingDistance)
+        else if(!PlayerInSight())
         {
             _nmEnemy.SetNextDestination();
         }
