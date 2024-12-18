@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9c6dca76659694ba3c87fd1d281d2f, type: 3}
   m_Name: Loot
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 0}
-  lootName: 
-  dropChanse: 0
+  lootObJ: {fileID: 0}
+  lootName: Bobick
+  dropChanse: 15
