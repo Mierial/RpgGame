@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   damage: 30
-  Needlvl: 1
+  needlvl: 0
+  attaktime: 1

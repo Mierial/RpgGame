@@ -5,12 +5,13 @@ using UnityEngine;
 public class Weapon : ScriptableObject
 {
     [SerializeField] private float damage;
-    [SerializeField] private int Needlvl;
+    [SerializeField] private int needlvl;
+    [SerializeField] private float attaktime;
 
 
 
 
-
-    public int NeedLvl => Needlvl;
+    public float Attaktime => attaktime;
+    public int NeedLvl => needlvl;
     public float Damage => damage;
 }
