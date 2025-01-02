@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BowMech : MonoBehaviour
 {
-    [SerializeField] private Weapon weapon;
+    [SerializeField] private WeaponSettings weapon;
         [Header("Arrow Settings")]
         public GameObject arrowPrefab; // Префаб стріли
         public Transform arrowSpawnPoint; // Точка появи стріли

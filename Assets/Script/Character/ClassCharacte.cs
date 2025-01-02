@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Character", menuName = "Character Info")]
 
-public class Class : ScriptableObject
+public class CharacterSettings : ScriptableObject
 {
     [Header("Haracteristik")]
     public float strenght;
     public float intelect;
     public float agility;
-    public float health;
+    public int health;
     [Header("Buff stats")]
     public float buffsternght;
     public float buffinelect;

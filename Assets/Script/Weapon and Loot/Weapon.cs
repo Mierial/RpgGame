@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Weapon", menuName = "Weapon Info")]
-public class Weapon : ScriptableObject
+
+public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField] private float damage;
-    [SerializeField] private int needlvl;
-    [SerializeField] private float attaktime;
+    [SerializeField] private WeaponSettings weapon;
+    public int needLvl;
+    public int Damage;
 
-
-
-
-    public float Attaktime => attaktime;
-    public int NeedLvl => needlvl;
-    public float Damage => damage;
+    private void Awake()
+    {
+        Damage = weapon.Damage;
+        needLvl = weapon.NeedLvl;
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageController : MonoBehaviour
 {
     ClassReader reader = FindObjectOfType<ClassReader>();
-    WeaponReader readerw = FindObjectOfType<WeaponReader>();
+    Weapon readerw = FindObjectOfType<Weapon>();
     public float damage;
 
     private void TakeDamage()
