@@ -1,15 +1,39 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageController : MonoBehaviour
 {
-    ClassReader reader = FindObjectOfType<ClassReader>();
-    Weapon readerw = FindObjectOfType<Weapon>();
-    public float damage;
+    ClassHerro reader; // Змінено на ClassHerro
+    Weapon readerw;
+
+    public int damage;
+
+    private void Start()
+    {
+        reader = FindObjectOfType<ClassHerro>();
+        readerw = FindObjectOfType<Weapon>();
+
+        if (reader == null || readerw == null)
+        {
+            Debug.LogError("Не вдалося знайти об'єкт ClassHerro або Weapon.");
+        }
+    }
 
     private void TakeDamage()
     {
-        damage = (reader.damage) / 2 + (readerw.damage) / 2; 
+        if (reader != null && readerw != null)
+        {
+            damage = (reader.Damage) / 2 + (readerw.Damage) / 2;
+            Debug.Log("Розраховано damage: " + damage);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) // Виклик TakeDamage при натисканні пробілу
+        {
+            TakeDamage();
+        }
     }
 }

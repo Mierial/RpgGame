@@ -8,6 +8,18 @@ public abstract class Character : MonoBehaviour
     protected int defense;
     protected int health;
     protected int maxHealth;
+
+    public int Damage
+    {
+        get { return damage; }
+        set
+        {
+            if (value < 0) { damage = 0; }
+            else { damage = value; }
+        }
+    }
+           
+
     public int Health
     {
         get { return health; }

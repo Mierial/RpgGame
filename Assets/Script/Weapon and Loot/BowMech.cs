@@ -1,24 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowMech : MonoBehaviour
+public class BowMech : Weapon
 {
-    [SerializeField] private WeaponSettings weapon;
+   
         [Header("Arrow Settings")]
         public GameObject arrowPrefab; // Префаб стріли
         public Transform arrowSpawnPoint; // Точка появи стріли
         public float shootForce;
-        public float maxDrawTime; 
+       
 
         private float currentDrawTime = 0f; // Час, витрачений на натяг
         private bool isDrawing = false; // Чи натягується лук
 
-    private void Awake()
-    {
-        shootForce = weapon.Damage;
-        maxDrawTime = weapon.Attaktime;
-    }
+   
 
     void Update()
         {
@@ -69,6 +66,7 @@ public class BowMech : MonoBehaviour
 
             // Скидання часу натягу
             currentDrawTime = 0f;
+        Debug.Log("Bow");
         }
     }
 

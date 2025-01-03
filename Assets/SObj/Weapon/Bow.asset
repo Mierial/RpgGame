@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55afccadcd48ac64ebd441d4b265d28b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac6999c8261f5044e9d2db4ad0fe335d, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  damage: 30
-  needlvl: 0
+  damage: 20
+  needlvl: 1
   attaktime: 1

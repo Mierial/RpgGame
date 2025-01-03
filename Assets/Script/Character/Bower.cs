@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bower : ClassReader
+public class Bower : ClassHerro
 {
     void Start()
     {

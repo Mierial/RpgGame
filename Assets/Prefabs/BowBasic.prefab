@@ -70,15 +70,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 66f0e5410080bb741b469b7f3adc0b29,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1469618015342766590}
+      addedObject: {fileID: 2957325526271232323}
   m_SourcePrefab: {fileID: 100100000, guid: 66f0e5410080bb741b469b7f3adc0b29, type: 3}
+--- !u!4 &1434363640982436368 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1512316738315180758, guid: 66f0e5410080bb741b469b7f3adc0b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 8711309481606569786}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8369271405735043691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66f0e5410080bb741b469b7f3adc0b29,
     type: 3}
   m_PrefabInstance: {fileID: 8711309481606569786}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1469618015342766590
+--- !u!114 &2957325526271232323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: ff68f60a4fd3c7541879e2ed87258267, type: 2}
-  arrowPrefab: {fileID: 0}
-  arrowSpawnPoint: {fileID: 0}
-  shootForce: 0
-  maxDrawTime: 0
+  arrowPrefab: {fileID: 8940053599712062327, guid: 23b19e1951b6eb74c979800db1b3c7d4,
+    type: 3}
+  arrowSpawnPoint: {fileID: 1434363640982436368}
+  shootForce: 30
