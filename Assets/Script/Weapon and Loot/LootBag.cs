@@ -5,13 +5,13 @@ using CustomPool;
 
 public class LootBag : MonoBehaviour
 {
-    [SerializeField] public Items _gameObject;
+    [SerializeField] public Item _gameObject;
     [SerializeField] public int counter;
 
-    private CustomPool<Items> _customPool;
+    private CustomPool<Item> _customPool;
     private void Awake()
     {
-        _customPool = new CustomPool<Items>(_gameObject, counter);
+        _customPool = new CustomPool<Item>(_gameObject, counter);
     }
 
     public void GetLot()

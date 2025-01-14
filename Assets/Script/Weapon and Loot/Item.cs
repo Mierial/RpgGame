@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour
+public class Item : MonoBehaviour
 {
     [SerializeField] private loot _loot;
     public int dropChanse;
