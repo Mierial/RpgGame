@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e40c5bc9af255a54f95b29e07ef5439f, type: 3}
-  m_Name: New Item
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  name: Lotleta
-  icon: {fileID: 21300000, guid: 247e14874aaa495499a5d3b11cd2e891, type: 3}
+  name: New Item
+  icon: {fileID: 21300000, guid: b564a7fb726897745982e65c2ea01989, type: 3}
   isDefaultItem: 0
-  prefab: {fileID: 1733875990565609330, guid: 8d2c54eb35a150f4d9525ea32e4d75a1, type: 3}
+  prefab: {fileID: 1953706618697791136, guid: a25f21c2ee128a84ab16e00a780d6ba3, type: 3}
