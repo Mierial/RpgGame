@@ -56,9 +56,10 @@ public class BowMech : Weapon
 
             // Створення стріли
             GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
+        arrow.transform.SetParent(transform);
 
-            // Додавання сили стрілі
-            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+        // Додавання сили стрілі
+        Rigidbody rb = arrow.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.AddForce(arrowSpawnPoint.forward * finalForce, ForceMode.Impulse);
@@ -68,5 +69,10 @@ public class BowMech : Weapon
             currentDrawTime = 0f;
         Debug.Log("Bow");
         }
+
+    public int GetBowDamage()
+    {
+        return damage;
+    }
     }
 

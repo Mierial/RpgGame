@@ -12,9 +12,17 @@ public class HealthController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out Weapon weapon))
+        if (other.gameObject.TryGetComponent(out Weapon weapon) )
         {
             _character.ClaimDamage(weapon.Damage);
+            
+            Debug.Log($"Damaged{weapon.Damage}" );
         }
+        else if ( other.gameObject.CompareTag("atakedpoint") && other.gameObject.TryGetComponent(out Arrow arrow))
+        {
+            _character.ClaimDamage(arrow.damage);
+            Debug.Log("Worked");
+        }
+        else { Debug.Log("LOX"); }
     }
 }

@@ -13,6 +13,7 @@ public class Enemy : Character
         damage = EnemiInfo.damage;
         defense = EnemiInfo.Defence;
     }
+    
 
     
 }

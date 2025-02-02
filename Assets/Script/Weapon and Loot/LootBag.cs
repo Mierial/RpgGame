@@ -15,13 +15,10 @@ public class LootBag : MonoBehaviour
     }
 
     public void GetLot()
-    {
+    { 
         
-        int number = Random.Range(1, 101);
-        if ( _gameObject.dropChanse >= number)
-        {
-            _customPool.Get();
-        }
+            
+        
     }
 
 

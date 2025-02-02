@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClassHerro : Character
 {
-    MooveMeh moov = FindObjectOfType<MooveMeh>();
+    
     [SerializeField] private CharacterSettings ClassCharact;
     public float strenght;
     public float intelect;

@@ -11,8 +11,7 @@ public class DamageController : MonoBehaviour
 
     private void Start()
     {
-        reader = FindObjectOfType<ClassHerro>();
-        readerw = FindObjectOfType<Weapon>();
+        
 
         if (reader == null || readerw == null)
         {
