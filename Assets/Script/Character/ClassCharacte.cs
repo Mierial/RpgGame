@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Character", menuName = "Character Info")]
 
-public class ClassCharacte : ScriptableObject
+public class Class : ScriptableObject
 {
     [Header("Haracteristik")]
     public float strenght;

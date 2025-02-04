@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Script/Character/Bower.cs.meta
 guid: b371adf83c392144eb8bea30d0337f15
+========
+guid: b73a9f557b36f3f49a5d85d7f45605e2
+>>>>>>>> main:Assets/ProgresBar.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
