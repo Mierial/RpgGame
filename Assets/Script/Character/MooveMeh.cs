@@ -53,16 +53,16 @@ public class MooveMeh : MonoBehaviour
 
     private void moovePlayer()
     {
-        
-            _currentrotationY += _horizontal * rotationSpeed;
-            transform.rotation = Quaternion.Euler(0, _currentrotationY, 0);
 
-            _direction = transform.forward * _vertical * _speed;
-            _direction.y = m_rb.velocity.y;
-            m_rb.velocity = _direction;
-       
+        _currentrotationY += _horizontal * rotationSpeed;
+        transform.rotation = Quaternion.Euler(0, _currentrotationY, 0);
 
-        
+        _direction = transform.forward * _vertical * _speed;
+        _direction.y = m_rb.velocity.y;
+        m_rb.velocity = _direction;
+
+
+
     }
     private void GetAnim()
     {
@@ -78,7 +78,7 @@ public class MooveMeh : MonoBehaviour
         {
             _animator.SetBool("Attack", true);
         }
-        else { _animator.SetBool("Attack",false);}
+        else { _animator.SetBool("Attack", false); }
     }
     public void Dead()
     {

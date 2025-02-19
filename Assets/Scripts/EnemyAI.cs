@@ -1,54 +1,105 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    private Transform _target;
+    public Transform _target;
     private NavMeshAgent _agent;
-    [SerializeField] private float _lookRadius;
+    [SerializeField] private float _lookRadius = 10f;
+    [SerializeField] private float _chaseSpeed = 2.6f;
+    [SerializeField] private float _patrolSpeed = 1.5f;
+    private Patroling _patrolingScript;
+    private Animator _animator;
+    private float timeSinceLastSeen = 6f;
+    private float _chaseMemoryDuration = 3f;
 
-    public Animator _animator;
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _target = PlayerManager.instance.player.transform;
+        _animator = GetComponent<Animator>();
+        _patrolingScript = GetComponent<Patroling>();
 
+        if (PlayerManager.instance != null && PlayerManager.instance.player != null)
+        {
+            _target = PlayerManager.instance.player.transform;
+        }
+
+        _agent.speed = _patrolSpeed;  // Начальная скорость патрулирования
     }
 
     void Update()
     {
-        float distance = Vector3.Distance(_target.position, transform.position);
-        if(distance <= _lookRadius)
+        if (_target == null) return;
+
+        float distanceToPlayer = Vector3.Distance(_target.position, transform.position);
+
+        if (distanceToPlayer <= _lookRadius)
         {
-            _animator.SetBool("isPatrolling", true);
-            _agent.SetDestination(_target.position);
-            if(distance-0.5 <= _agent.stoppingDistance)
-            {
-                _animator.SetBool("isFight", true);
-                _animator.SetBool("isPatrolling", false);
-                LookTarget();
-            }
-            else
-            {
-                _animator.SetBool("isFight", false);
-            }
+            timeSinceLastSeen = 0f;
+            ChasePlayer(distanceToPlayer);
         }
         else
         {
-            _animator.SetBool("isPatrolling", false);
+            timeSinceLastSeen += Time.deltaTime;
+
+            if (timeSinceLastSeen <= _chaseMemoryDuration)
+            {
+                ChasePlayer(distanceToPlayer);
+            }
+            else
+            {
+                Patrol();
+            }
+        }
+
+        _animator.SetBool("isDetect", distanceToPlayer <= _lookRadius);  // Анимация обнаружения
+    }
+
+    void ChasePlayer(float distanceToPlayer)
+    {
+        _animator.SetBool("isPatrolling", false);
+        _animator.SetBool("isDetect", true);
+
+        _agent.speed = _chaseSpeed;
+        _agent.SetDestination(_target.position);
+
+        // Если враг близко к игроку, активируем боевую анимацию
+        if (distanceToPlayer <= _agent.stoppingDistance + 0.5f)
+        {
+            _animator.SetBool("isFight", true);
+            _animator.SetBool("isDetect", false);  // Выключаем анимацию детекции
+        }
+        else
+        {
+            _animator.SetBool("isFight", false);  // Включаем нормальное преследование
         }
     }
 
-    void LookTarget()
+    void Patrol()
     {
-        Vector3 direction = (_target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation,Time.deltaTime*5f);
-    }
-    public void AttackboxOn() {
-        Debug.Log("�");
+        if (_patrolingScript != null && !_patrolingScript.IsPatrolling())
+        {
+            _animator.SetBool("isPatrolling", true);
+            _animator.SetBool("isDetect", false);
+            _animator.SetBool("isFight", false);
+
+            _agent.speed = _patrolSpeed;
+
+            _patrolingScript.StartPatrol();
+        }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _lookRadius);
+    }
+
+    public void Die()
+    {
+        GetComponent<EnemyDropLoot>()?.DropLoot();
+        Destroy(gameObject);
+    }
 }

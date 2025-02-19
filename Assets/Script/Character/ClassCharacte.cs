@@ -1,28 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 [CreateAssetMenu(fileName = "Character", menuName = "Character Info")]
-
-public class Class : ScriptableObject
+public class CharacterSettings : ScriptableObject
 {
-    [Header("Haracteristik")]
-    public float strenght;
-    public float intelect;
+    [Header("Characteristics")]
+    public float strength;
+    public float intellect;
     public float agility;
-    public float health;
+    public int health;
+
     [Header("Buff stats")]
-    public float buffsternght;
-    public float buffinelect;
-    public float buffagility;
+    public float buffStrength;
+    public float buffIntellect;
+    public float buffAgility;
 
 
-    public float Strenght => strenght;
-    public float Intelect => intelect;
+    public float Strength => strength;
+    public float Intellect => intellect;
     public float Agility => agility;
-    public float Health => health;
-    public float Buffsternght => buffsternght;
-    public float Buffinelect => buffinelect;
-    public float Buffagility => buffagility;
+    public int Health => health;
+    public float BuffStrength => buffStrength;
+    public float BuffIntellect => buffIntellect;
+    public float BuffAgility => buffAgility;
 
 
+    public float GetTotalStrength() => strength + buffStrength;
+    public float GetTotalIntellect() => intellect + buffIntellect;
+    public float GetTotalAgility() => agility + buffAgility;
+
+    public void ModifyHealth(int amount)
+    {
+        health += amount;
+        if (health < 0) health = 0;
+    }
 }

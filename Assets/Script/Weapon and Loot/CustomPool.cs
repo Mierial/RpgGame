@@ -9,6 +9,7 @@ namespace CustomPool
         private T _prefab;
         private List<T> _objects;
 
+
         public CustomPool(T prefab, int prewarmObjects)
         {
             _prefab = prefab;
@@ -16,15 +17,14 @@ namespace CustomPool
 
             for (int i = 0; i < prewarmObjects; i++)
             {
-                var obj = GameObject.Instantiate(_prefab);
+                var obj = Create();
                 obj.gameObject.SetActive(false);
-                _objects.Add(obj);
             }
         }
 
-        public T Get()
+        public T Get(Vector3 position, Quaternion rotation)
         {
-            var obj = _objects.FirstOrDefault(x => !x.isActiveAndEnabled);
+            var obj = _objects.FirstOrDefault(o => !o.gameObject.activeInHierarchy);
 
             if (obj == null)
             {
@@ -32,12 +32,18 @@ namespace CustomPool
             }
 
             obj.gameObject.SetActive(true);
+            obj.transform.position = position;
+            obj.transform.rotation = rotation;
             return obj;
         }
 
         public void Release(T obj)
         {
             obj.gameObject.SetActive(false);
+            if (!_objects.Contains(obj))
+            {
+                _objects.Add(obj);
+            }
         }
 
         private T Create()

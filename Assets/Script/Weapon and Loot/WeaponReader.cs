@@ -11,6 +11,6 @@ public class WeaponReader : MonoBehaviour
     private void Awake()
     {
         damage = weapon.Damage;
-        needLvl = weapon.NeedLvl;
+        needLvl = weapon.needLvl;
     }
 }
