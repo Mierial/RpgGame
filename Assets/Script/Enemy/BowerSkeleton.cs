@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowerSkeleton : EnemyCharacter
+public class BowerSkeleton : Enemy
 {
    
     void Start()

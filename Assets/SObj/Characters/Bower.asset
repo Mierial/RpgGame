@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e9f00af20c5d049a6f2da2467707ab, type: 3}
   m_Name: Bower
   m_EditorClassIdentifier: 
-  strenght: 8
-  intelect: 5
+  strength: 0
+  intellect: 0
   agility: 10
-  health: 150
-  buffsternght: 0.5
-  buffinelect: 0.4
-  buffagility: 0.5
+  health: 200
+  buffStrength: 0
+  buffIntellect: 0
+  buffAgility: 0

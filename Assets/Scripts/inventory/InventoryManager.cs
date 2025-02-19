@@ -9,7 +9,6 @@ public class InventoryManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogWarning("More than 1 instance");
             return;
         }
         Instance = this;
@@ -21,16 +20,15 @@ public class InventoryManager : MonoBehaviour
     public List<Item> items = new List<Item>();
     public int space = 20;
 
-    public Item heldItem; // Текущий предмет в руке
-    public Transform handTransform; // Точка, куда будет появляться предмет
+    public Item heldItem;
+    public Transform handTransform;
 
-    private GameObject heldObject; // Текущий объект в руке
+    private GameObject heldObject;
 
     public bool Add(Item item)
     {
         if (items.Count >= space)
         {
-            Debug.Log("Not enough space in inventory.");
             return false;
         }
 
@@ -43,7 +41,6 @@ public class InventoryManager : MonoBehaviour
     {
         items.Remove(item);
 
-        // Если удаляем предмет, который в руке - он тоже выбрасывается
         if (heldItem == item)
         {
             DropItem(item);
@@ -55,7 +52,6 @@ public class InventoryManager : MonoBehaviour
     {
         heldItem = item;
         HoldItem(item);
-        Debug.Log("Item in hand: " + item.name);
     }
 
     private void HoldItem(Item item)
@@ -69,25 +65,23 @@ public class InventoryManager : MonoBehaviour
         {
             heldObject = Instantiate(item.prefab, handTransform.position, handTransform.rotation, handTransform);
 
-            // Отключаем скрипт ItemPickUp
             ItemPickUp itemPickUp = heldObject.GetComponent<ItemPickUp>();
             if (itemPickUp != null)
             {
                 itemPickUp.enabled = false;
             }
 
-            // Отключаем коллайдер у предмета в руке
-            Collider col = heldObject.GetComponent<Collider>();
-            if (col != null)
-            {
-                col.enabled = false;
-            }
-
-            // Делаем объект кинематическим
             Rigidbody rb = heldObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.isKinematic = true;
+            }
+
+            Collider[] colliders = heldObject.GetComponentsInChildren<Collider>();
+            foreach (Collider col in colliders)
+            {
+                col.enabled = true;
+                col.isTrigger = true;
             }
         }
     }
@@ -96,32 +90,37 @@ public class InventoryManager : MonoBehaviour
     {
         if (item != null)
         {
-            Vector3 dropPosition = handTransform.position + handTransform.forward * 2f;
+            // Определяем, на каком расстоянии от игрока должен спауниться объект
+            float dropDistance = 3f; // расстояние вперед
+            float heightOffset = 2f; // смещение по оси Y для поднятия объекта
+
+            // Спавним объект на новой позиции с небольшим поднятием по оси Y
+            Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
+
+            // Спавним объект
             GameObject droppedObject = Instantiate(item.prefab, dropPosition, Quaternion.identity);
 
-            // Включаем скрипт ItemPickUp у выброшенного предмета
+            // Настроим компоненты у сброшенного объекта
             ItemPickUp itemPickUp = droppedObject.GetComponent<ItemPickUp>();
             if (itemPickUp != null)
             {
                 itemPickUp.enabled = true;
             }
 
-            // Включаем коллайдер у выброшенного предмета
-            Collider col = droppedObject.GetComponent<Collider>();
-            if (col != null)
+            Collider[] colliders = droppedObject.GetComponentsInChildren<Collider>();
+            foreach (Collider col in colliders)
             {
                 col.enabled = true;
+                col.isTrigger = false;
             }
 
-            // Отключаем кинематику (делаем объект физическим)
             Rigidbody rb = droppedObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.isKinematic = false;
             }
 
-            Debug.Log("Dropped: " + item.name);
-
+            // Если в руке был объект, удаляем его
             if (heldObject != null)
             {
                 Destroy(heldObject);
@@ -129,4 +128,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+
 }

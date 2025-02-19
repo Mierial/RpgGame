@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bower
+public class Bower : ClassHerro
 {
     void Start()
     {
