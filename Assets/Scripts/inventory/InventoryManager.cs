@@ -49,14 +49,20 @@ public class InventoryManager : MonoBehaviour
     }
     public void SellItem(Item item)
     {
-      
+        items.Remove(item);
         if (heldItem == item)
         {
-            items.Remove(item);
+            
             Destroy(item);
             heldItem = null;
+            if (heldObject != null)
+            {
+                Destroy(heldObject);
+                heldItem = null;
+            }
         }
-       
+        
+
     }
 
     public void SetHeldItem(Item item)
