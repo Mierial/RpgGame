@@ -1,31 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Sell : MonoBehaviour
 {
-    [SerializeField] private Text Text;
-    private Item item_pref;
+    [SerializeField] private Text infoText;
     [SerializeField] private InventoryManager inventoryManager;
-    int value = 0;
+    private Item item_pref;
+    private int totalValue = 0;
+
     private void OnTriggerEnter(Collider other)
     {
         item_pref = inventoryManager.heldItem;
-     Debug.Log($"?????????? item_pref:");
-        
     }
 
     public void SellItem()
     {
         if (item_pref == null)
         {
-            Debug.LogError("item_pref == null, ?? ????? ??????? ???????!");
             return;
         }
+        InventorySlot slotToClear = inventoryManager.FindSlotWithItem(item_pref);
 
-        value += item_pref.ItemValue;
+        if (slotToClear != null)
+        {
+            slotToClear.ClearSlot();
+        }
+
+        totalValue += item_pref.ItemValue;
         inventoryManager.SellItem(item_pref);
-        Debug.Log($"Nice Work{value}");
+
+        inventoryManager.onItemChangedCallback?.Invoke();
+
+        inventoryManager.heldItem = null;
     }
+
 }

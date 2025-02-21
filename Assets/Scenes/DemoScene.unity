@@ -12506,7 +12506,7 @@ Transform:
   m_GameObject: {fileID: 1440907487}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 542.95, y: 7.33, z: 294.79}
+  m_LocalPosition: {x: 531.9, y: 7.33, z: 348.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12525,6 +12525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 0}
+  inventorySlot: {fileID: 0}
   inventoryManager: {fileID: 1337169413}
 --- !u!114 &1440907490
 MonoBehaviour:

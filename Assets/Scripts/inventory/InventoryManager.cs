@@ -5,6 +5,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
+
     private void Awake()
     {
         if (Instance != null)
@@ -19,7 +20,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     public int space = 20;
-
+    public List<InventorySlot> inventorySlots;
     public Item heldItem;
     public Transform handTransform;
 
@@ -46,17 +47,6 @@ public class InventoryManager : MonoBehaviour
             DropItem(item);
             heldItem = null;
         }
-    }
-    public void SellItem(Item item)
-    {
-      
-        if (heldItem == item)
-        {
-            items.Remove(item);
-            Destroy(item);
-            heldItem = null;
-        }
-       
     }
 
     public void SetHeldItem(Item item)
@@ -101,17 +91,13 @@ public class InventoryManager : MonoBehaviour
     {
         if (item != null)
         {
-            // Определяем, на каком расстоянии от игрока должен спауниться объект
-            float dropDistance = 3f; // расстояние вперед
-            float heightOffset = 2f; // смещение по оси Y для поднятия объекта
+            float dropDistance = 3f;
+            float heightOffset = 2f;
 
-            // Спавним объект на новой позиции с небольшим поднятием по оси Y
+
             Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
-
-            // Спавним объект
             GameObject droppedObject = Instantiate(item.prefab, dropPosition, Quaternion.identity);
 
-            // Настроим компоненты у сброшенного объекта
             ItemPickUp itemPickUp = droppedObject.GetComponent<ItemPickUp>();
             if (itemPickUp != null)
             {
@@ -131,7 +117,6 @@ public class InventoryManager : MonoBehaviour
                 rb.isKinematic = false;
             }
 
-            // Если в руке был объект, удаляем его
             if (heldObject != null)
             {
                 Destroy(heldObject);
@@ -140,5 +125,28 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void SellItem(Item item)
+    {
+        items.Remove(item);
+
+        if (heldItem == item)
+        {
+            Destroy(heldObject);
+            heldItem = null;
+        }
+
+    }
+
+    public InventorySlot FindSlotWithItem(Item item)
+    {
+        foreach (var slot in inventorySlots) 
+        {
+            if (slot.ContainsItem(item))
+            {
+                return slot;
+            }
+        }
+        return null;
+    }
 
 }
