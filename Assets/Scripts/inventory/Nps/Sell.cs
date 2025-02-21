@@ -12,7 +12,7 @@ public class Sell : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         item_pref = inventoryManager.heldItem;
-     Debug.Log($"?????????? item_pref:");
+     Debug.Log($" item_pref:");
         
     }
 
@@ -20,12 +20,14 @@ public class Sell : MonoBehaviour
     {
         if (item_pref == null)
         {
-            Debug.LogError("item_pref == null, ?? ????? ??????? ???????!");
+            Debug.LogError("item_pref == null");
             return;
         }
-
-        value += item_pref.ItemValue;
-        inventoryManager.SellItem(item_pref);
-        Debug.Log($"Nice Work{value}");
+        else
+        {
+            value += item_pref.ItemValue;
+            inventoryManager.SellItem(item_pref);
+            Debug.Log($"Nice Work{value}");
+        }
     }
 }

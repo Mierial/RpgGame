@@ -45,7 +45,7 @@ public class MooveMeh : MonoBehaviour
         if (Input.GetButton("Jump") && IsGround)
         {
             _animator.SetTrigger(Jump);
-            m_rb.AddForce(Vector3.up * _jumpForse, ForceMode.Impulse);
+           
             IsGround = false;
 
         }
