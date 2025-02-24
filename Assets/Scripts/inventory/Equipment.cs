@@ -1,17 +1,10 @@
 using UnityEngine;
 
+public enum EquipmentSlot { Head, Chest, Legs, Feet, Weapon, Shield }
+
 [CreateAssetMenu(fileName = "New Equipment", menuName = "Inventory/Equipment")]
 public class Equipment : Item
 {
-    public EquipmentSlot EquipSlot;
-    public int armorModifier;
-    public int damageModifier;
-
-    public override void Use()
-    {
-        base.Use();
-        EquipmentManager.Instance.Equip(this);
-    }
+    public EquipmentSlot EquipSlot; // Тип слота (грудь, голова и т.д.)
+    public GameObject prefab; // Префаб модели брони
 }
-
-public enum EquipmentSlot { Head, Chest, Legs, Weapon, Shield, Feet }

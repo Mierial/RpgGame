@@ -21,11 +21,14 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            InventoryUi.SetActive(!InventoryUi.activeSelf);
+            bool isInventoryOpen = !InventoryUi.activeSelf;
+            InventoryUi.SetActive(isInventoryOpen);
         }
     }
 
-    void UpdateUi()
+
+
+void UpdateUi()
     {
         for (int i = 0; i < slots.Length; i++)
         {
