@@ -5,7 +5,6 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
-
     private void Awake()
     {
         if (Instance != null)
@@ -24,7 +23,7 @@ public class InventoryManager : MonoBehaviour
     public Item heldItem;
     public Transform handTransform;
 
-    private GameObject heldObject;
+    public GameObject heldObject;
 
     public bool Add(Item item)
     {
@@ -94,7 +93,6 @@ public class InventoryManager : MonoBehaviour
             float dropDistance = 3f;
             float heightOffset = 2f;
 
-
             Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
             GameObject droppedObject = Instantiate(item.prefab, dropPosition, Quaternion.identity);
 
@@ -134,12 +132,11 @@ public class InventoryManager : MonoBehaviour
             Destroy(heldObject);
             heldItem = null;
         }
-
     }
 
     public InventorySlot FindSlotWithItem(Item item)
     {
-        foreach (var slot in inventorySlots) 
+        foreach (var slot in inventorySlots)
         {
             if (slot.ContainsItem(item))
             {
@@ -148,5 +145,4 @@ public class InventoryManager : MonoBehaviour
         }
         return null;
     }
-
 }

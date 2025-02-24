@@ -34,7 +34,14 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
-            InventoryManager.Instance.SetHeldItem(item);
+            if (item is Equipment equipment)
+            {
+                EquipmentManager.Instance.Equip(equipment);
+            }
+            else
+            {
+                InventoryManager.Instance.SetHeldItem(item);
+            }
         }
     }
 
@@ -42,5 +49,4 @@ public class InventorySlot : MonoBehaviour
     {
         return item == searchItem;
     }
-
 }

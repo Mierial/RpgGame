@@ -5,12 +5,18 @@ public class Sell : MonoBehaviour
 {
     [SerializeField] private Text infoText;
     [SerializeField] private InventoryManager inventoryManager;
+    public Text valueText;
     private Item item_pref;
-    private int totalValue = 0;
+
+    public Image itemImage;
+    public int totalValue = 0;
 
     private void OnTriggerEnter(Collider other)
     {
+        valueText.text = totalValue.ToString();
         item_pref = inventoryManager.heldItem;
+        itemImage.sprite = item_pref.icon;
+        infoText.text = item_pref.ItemValue.ToString();
     }
 
     public void SellItem()
@@ -27,11 +33,17 @@ public class Sell : MonoBehaviour
         }
 
         totalValue += item_pref.ItemValue;
+        UpdateText();
         inventoryManager.SellItem(item_pref);
 
         inventoryManager.onItemChangedCallback?.Invoke();
 
         inventoryManager.heldItem = null;
+    }
+
+    public void UpdateText()
+    {
+        valueText.text = totalValue.ToString();
     }
 
 }
