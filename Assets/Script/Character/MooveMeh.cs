@@ -12,9 +12,6 @@ public class MooveMeh : MonoBehaviour
     [SerializeField] private float _jumpForse;
     [SerializeField] private float rotationSpeed;
 
-    public InventoryUI inventoryUI;
-    public BothItem sellItem;
-
     private Animator _animator;
     private Rigidbody m_rb;
     private float _currentrotationY;
@@ -40,19 +37,19 @@ public class MooveMeh : MonoBehaviour
         moovePlayer();
         GetAnim();
         GetJump();
-        AttackPos();
+        AttakPos();
 
     }
     public void GetJump()
     {
-        if (Input.GetButtonDown("Jump") && IsGround)
+        if (Input.GetButton("Jump") && IsGround)
         {
             _animator.SetTrigger(Jump);
-            m_rb.velocity = new Vector3(m_rb.velocity.x, _jumpForse, m_rb.velocity.z);
+           
             IsGround = false;
+
         }
     }
-
 
     private void moovePlayer()
     {
@@ -75,12 +72,14 @@ public class MooveMeh : MonoBehaviour
     {
         IsGround = true;
     }
-    private void AttackPos() 
+    private void AttakPos()
     {
-        bool isAttacking = Input.GetButton("Fire1") && !inventoryUI.InventoryUi.activeSelf && !sellItem.panel.activeSelf;
-        _animator.SetBool("Attack", isAttacking);
+        if (Input.GetButton("Fire1"))
+        {
+            _animator.SetBool("Attack", true);
+        }
+        else { _animator.SetBool("Attack", false); }
     }
-
     public void Dead()
     {
         _animator.SetTrigger("Dead");

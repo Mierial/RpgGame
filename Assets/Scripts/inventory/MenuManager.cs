@@ -44,8 +44,4 @@ public class MenuManager : MonoBehaviour
         resolutionPanel.SetActive(true);
         settingsPanel.SetActive(false);
     }
-    public void HidePanel()
-    {
-        mainMenuPanel.SetActive(false);
-    }
 }

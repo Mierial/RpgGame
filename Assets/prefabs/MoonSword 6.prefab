@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7355681012543960200}
   - component: {fileID: -3108475825641481851}
   - component: {fileID: 4489736090491527379}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MoonSword 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
