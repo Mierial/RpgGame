@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class nearnpsbutton : MonoBehaviour
 {
-    [SerializeField] public Button _button;
-    private void Awake()
+    [SerializeField] public GameObject _button;
+    public InventoryManager inventory;
+    private void Awake( )
     {
         _button.gameObject.SetActive(false);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")&& inventory.heldItem!=null)
         {
             _button.gameObject.SetActive(true);
+        }
+        else
+        {
+            return;
         }
     }
     private void OnTriggerExit(Collider other)

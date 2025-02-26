@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
     public Item heldItem;
     public Transform handTransform;
 
-    private GameObject heldObject;
+    public GameObject heldObject;
 
     public bool Add(Item item)
     {
@@ -107,11 +107,17 @@ public class InventoryManager : MonoBehaviour
     {
         if (item != null)
         {
+<<<<<<< HEAD
             // Определяем, на каком расстоянии от игрока должен спауниться объект
             float dropDistance = 3f; // расстояние вперед
             float heightOffset = 2f; // смещение по оси Y для поднятия объекта
 
             // Спавним объект на новой позиции с небольшим поднятием по оси Y
+=======
+            float dropDistance = 3f;
+            float heightOffset = 2f;
+
+>>>>>>> d01ea85 (shop)
             Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
 
             // Спавним объект
@@ -147,4 +153,25 @@ public class InventoryManager : MonoBehaviour
     }
 
 
+<<<<<<< HEAD
+=======
+        if (heldItem == item)
+        {
+            Destroy(heldObject);
+            heldItem = null;
+        }
+    }
+
+    public InventorySlot FindSlotWithItem(Item item)
+    {
+        foreach (var slot in inventorySlots)
+        {
+            if (slot.ContainsItem(item))
+            {
+                return slot;
+            }
+        }
+        return null;
+    }
+>>>>>>> d01ea85 (shop)
 }
