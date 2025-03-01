@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/inventory/EquipmentManager.cs.meta
 guid: 0a988284ed7509448823658a41d69647
-========
-guid: 2e64aef6dfe684e4c8ae27f39fecdd91
->>>>>>>> 3d6a45a (equipment):Assets/Scripts/inventory/Equipment.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
