@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerEqwuipment : MonoBehaviour
 {
-    public Transform handPosition; 
-    private GameObject currentItem; 
+    public Transform handPosition; // Місце для предмета в руці
+    private GameObject currentItem; // Активний предме
 
-
+    // Метод для взяття предмета в руку
     public void HoldItem(GameObject itemPrefab)
     {
         if (currentItem != null)
@@ -18,7 +18,7 @@ public class PlayerEqwuipment : MonoBehaviour
         currentItem.transform.SetParent(handPosition);
     }
 
-
+    // Метод для викидання предмета з руки
     public void DropItem()
     {
         if (currentItem != null)

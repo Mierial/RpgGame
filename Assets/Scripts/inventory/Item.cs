@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
@@ -8,9 +9,6 @@ public class Item : ScriptableObject
     public bool isDefaultItem = false;
     public GameObject prefab;
     public int ItemValue;
-    public int armorCount; 
-
-
 
     public virtual void Use()
     {

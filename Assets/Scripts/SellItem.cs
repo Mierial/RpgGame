@@ -10,9 +10,8 @@ public class BothItem : MonoBehaviour
     public GameObject panel;
     public InventoryManager inventoryManager;
 
-    public Image[] images; 
-
     public Sell sellManager;
+
     private int _currentNumberSlot = 0;
     private void Start()
     {
@@ -32,7 +31,6 @@ public class BothItem : MonoBehaviour
         }
         image.sprite = items[_currentNumberSlot].icon;
         _buyPrice = items[_currentNumberSlot].ItemValue;
-        buyText.text = _buyPrice.ToString();
     }
 
     public void NextItem()
@@ -59,19 +57,12 @@ public class BothItem : MonoBehaviour
     
     public void BuyItem()
     {
-        if (sellManager.totalValue >= _buyPrice&& items[_currentNumberSlot].armorCount==0)
+        if (sellManager.totalValue >= _buyPrice)
         {
             InventoryManager.Instance.Add(items[_currentNumberSlot]);
             sellManager.totalValue -= _buyPrice;
             sellManager.UpdateText();
-        }
-        else if(sellManager.totalValue >= _buyPrice && items[_currentNumberSlot].armorCount >= 0)
-        {
-            int curenntItem = 0;
-            images[curenntItem].sprite = items[_currentNumberSlot].icon;
-            curenntItem++;
-            sellManager.totalValue -= _buyPrice;
-            sellManager.UpdateText();
+
         }
     }
 

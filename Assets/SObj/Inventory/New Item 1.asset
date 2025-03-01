@@ -17,4 +17,3 @@ MonoBehaviour:
   isDefaultItem: 0
   prefab: {fileID: 0}
   ItemValue: 100
-  armorCount: 50
