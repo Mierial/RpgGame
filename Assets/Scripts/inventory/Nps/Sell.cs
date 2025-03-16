@@ -13,10 +13,24 @@ public class Sell : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        valueText.text = totalValue.ToString();
+        UpdateItemInfo();
+    }
+
+    private void UpdateItemInfo()
+    {
         item_pref = inventoryManager.heldItem;
-        itemImage.sprite = item_pref.icon;
-        infoText.text = item_pref.ItemValue.ToString();
+
+        if (item_pref != null)
+        {
+            itemImage.sprite = item_pref.icon;
+            itemImage.gameObject.SetActive(true);
+            infoText.text = item_pref.ItemValue.ToString();
+        }
+        else
+        {
+            itemImage.gameObject.SetActive(false);
+            infoText.text = "0";
+        }
     }
 
     public void SellItem()
@@ -25,6 +39,7 @@ public class Sell : MonoBehaviour
         {
             return;
         }
+
         InventorySlot slotToClear = inventoryManager.FindSlotWithItem(item_pref);
 
         if (slotToClear != null)
@@ -32,18 +47,20 @@ public class Sell : MonoBehaviour
             slotToClear.ClearSlot();
         }
 
-        totalValue += item_pref.ItemValue;
-        UpdateText();
-        inventoryManager.SellItem(item_pref);
+        if (InventoryManager.Instance.heldItem != null)
+        {
+            totalValue += item_pref.ItemValue;
+            inventoryManager.SellItem(item_pref);
+            inventoryManager.heldItem = null;
+        }
 
         inventoryManager.onItemChangedCallback?.Invoke();
-
-        inventoryManager.heldItem = null;
+        UpdateItemInfo();
+        UpdateText();
     }
 
     public void UpdateText()
     {
         valueText.text = totalValue.ToString();
     }
-
 }

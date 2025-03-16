@@ -14,7 +14,7 @@ public class nearnpsbutton : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player")&& inventory.heldItem!=null)
+        if (other.CompareTag("Player"))
         {
             _button.gameObject.SetActive(true);
         }

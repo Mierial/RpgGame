@@ -8,7 +8,8 @@ public class Item : ScriptableObject
     public bool isDefaultItem = false;
     public GameObject prefab;
     public int ItemValue;
-    public int armorCount; 
+    public int armorCount;
+    public int healCount;
 
 
 
