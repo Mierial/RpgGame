@@ -9,6 +9,7 @@ TagManager:
   - atakedpoint
   - Ground
   - Enemy
+  - exp
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Mobs
+  - 
   - 
   - 
   - 

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/New Animator Controller.controller.meta
+<<<<<<<< HEAD:Assets/Script/New Animator Controller.controller.meta
+guid: c20ea521f46d33e44b14f815e69a4e5c
+========
+guid: ef6403663453e6a4cb106814a81e72b4
+>>>>>>>> origin/test:Assets/Blink/Art/Characters/Stylized/Demo_Characters/StylizedHumanAnimator.controller.meta
+=======
+guid: fecf6d756e0aaae41ada7c746eed59b9
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Animator/Animator Controller.controller.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

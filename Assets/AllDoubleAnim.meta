@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: e3e227006410da34982c07113db4e0d2
+<<<<<<<< HEAD:Assets/AllDoubleAnim.meta
+guid: 16afc4052ca34f643bccc998ccf4af3b
+========
+guid: 94964f5e0446d0146b12ef812b01f564
+>>>>>>>> stas-nps:Assets/Scripts/DialogueEditor/Assets/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

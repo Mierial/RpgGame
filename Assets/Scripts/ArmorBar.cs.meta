@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 31abc27538e5e23489036d9a6543f558
+<<<<<<<< HEAD:Assets/Scripts/ArmorBar.cs.meta
+guid: 1090d4756319b28499c7080f379deecc
+========
+guid: 30eacc8e87a44df418c8e0e5d68cfd90
+>>>>>>>> stas-nps:Assets/Scripts/QuestSistem/Quest.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

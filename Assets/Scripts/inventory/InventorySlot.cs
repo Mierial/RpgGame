@@ -35,6 +35,7 @@ public class InventorySlot : MonoBehaviour
         if (item != null)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (item is Equipment equipment)
             {
                 EquipmentManager.Instance.Equip(equipment);
@@ -61,4 +62,9 @@ public class InventorySlot : MonoBehaviour
 >>>>>>> d01ea85 (shop)
 =======
 >>>>>>> origin/test
+=======
+            InventoryManager.Instance.SetHeldItem(item);
+        }
+    }
+>>>>>>> stas-nps
 }

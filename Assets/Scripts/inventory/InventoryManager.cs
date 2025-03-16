@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
     public Item heldItem;
     public Transform handTransform;
 
-    public GameObject heldObject;
+    private GameObject heldObject;
 
     public bool Add(Item item)
     {
@@ -109,11 +109,15 @@ public class InventoryManager : MonoBehaviour
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> stas-nps
             // Определяем, на каком расстоянии от игрока должен спауниться объект
             float dropDistance = 3f; // расстояние вперед
             float heightOffset = 2f; // смещение по оси Y для поднятия объекта
 
             // Спавним объект на новой позиции с небольшим поднятием по оси Y
+<<<<<<< HEAD
 =======
             float dropDistance = 3f;
             float heightOffset = 2f;
@@ -122,6 +126,9 @@ public class InventoryManager : MonoBehaviour
 =======
             float dropDistance = 3f;
             float heightOffset = 2f;
+=======
+            Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
+>>>>>>> stas-nps
 
 >>>>>>> origin/test
             Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
@@ -160,6 +167,7 @@ public class InventoryManager : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/test
@@ -186,4 +194,6 @@ public class InventoryManager : MonoBehaviour
 =======
    
 >>>>>>> origin/test
+=======
+>>>>>>> stas-nps
 }

@@ -1,43 +1,33 @@
+<<<<<<< HEAD
 using UnityEngine;
 <<<<<<< HEAD
+=======
+using System.Collections;
+>>>>>>> stas-nps
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
+    #region Singleton
     public static EquipmentManager Instance;
+    InventoryManager inventory;
 
     private void Awake()
     {
         Instance = this;
     }
+    #endregion
 
-    private Equipment[] currentEquipment;
+    Equipment[] currentEquipment;
 
-    [Header("Слоты для брони")]
-    public Transform headSlot;
-    public Transform chestSlot;
-    public Transform legsSlot;
-    public Transform feetSlot;
-    public Transform weaponSlot;
-    public Transform shieldSlot;
-
-    private Dictionary<EquipmentSlot, Transform> slotTransforms;
+    public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
+    public OnEquipmentChanged onEquipmentChanged;
 
     private void Start()
     {
         int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numSlots];
-
-        // Заполняем словарь с трансформами слотов
-        slotTransforms = new Dictionary<EquipmentSlot, Transform>()
-        {
-            { EquipmentSlot.Head, headSlot },
-            { EquipmentSlot.Chest, chestSlot },
-            { EquipmentSlot.Legs, legsSlot },
-            { EquipmentSlot.Feet, feetSlot },
-            { EquipmentSlot.Weapon, weaponSlot },
-            { EquipmentSlot.Shield, shieldSlot }
-        };
     }
 
     public void Equip(Equipment newItem)
@@ -48,36 +38,27 @@ public class EquipmentManager : MonoBehaviour
         if (currentEquipment[slotIndex] != null)
         {
             oldItem = currentEquipment[slotIndex];
-            InventoryManager.Instance.Add(oldItem);
-            DestroyEquippedItem(oldItem);
+            inventory.Add(oldItem);
         }
 
         currentEquipment[slotIndex] = newItem;
-        SpawnEquipmentModel(newItem);
     }
 
-    private void SpawnEquipmentModel(Equipment equipment)
+    public void Unequip(int slotIndex)
     {
-        if (equipment.prefab == null) return;
-
-        if (slotTransforms.TryGetValue(equipment.EquipSlot, out Transform slotTransform))
+        if (currentEquipment[slotIndex] != null)
         {
-            GameObject newEquip = Instantiate(equipment.prefab, slotTransform);
-            newEquip.transform.localPosition = Vector3.zero;
-            newEquip.transform.localRotation = Quaternion.identity;
-        }
-    }
+            Equipment oldItem = currentEquipment[slotIndex];
+            inventory.Add(oldItem);
+            currentEquipment[slotIndex] = null;
 
-    private void DestroyEquippedItem(Equipment oldItem)
-    {
-        if (slotTransforms.TryGetValue(oldItem.EquipSlot, out Transform slotTransform))
-        {
-            if (slotTransform.childCount > 0)
+            if (onEquipmentChanged != null)
             {
-                Destroy(slotTransform.GetChild(0).gameObject);
+                onEquipmentChanged.Invoke(null, oldItem);
             }
         }
     }
+<<<<<<< HEAD
 =======
 using UnityEngine.UI;
 
@@ -86,4 +67,22 @@ public class EquipmentManager : MonoBehaviour
     public Image[] images;
 
 >>>>>>> origin/test
+=======
+
+    public void UnequipAll()
+    {
+        for (int i = 0; i < currentEquipment.Length; i++)
+        {
+            Unequip(i);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UnequipAll();
+        }
+    }
+>>>>>>> stas-nps
 }

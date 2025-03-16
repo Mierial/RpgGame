@@ -17,9 +17,13 @@ MonoBehaviour:
   isDefaultItem: 0
   prefab: {fileID: 1733875990565609330, guid: 8d2c54eb35a150f4d9525ea32e4d75a1, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
   ItemValue: 15
 =======
   ItemValue: 250
   armorCount: 0
   healCount: 30
 >>>>>>> origin/test
+=======
+  ItemValue: 10
+>>>>>>> stas-nps

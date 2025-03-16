@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d17ff50433be5cb4db738b2d7b314d07
+<<<<<<<< HEAD:Assets/MushroomMan/Material/MushroomMan.mat.meta
+guid: 990e99974aae0e54099c4ad9340a28bc
+========
+guid: 47ce78e26e0d0aa46a3873d869b96031
+>>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Materials/Peasant Nolant Green.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Nps/EatFood.cs.meta
+guid: c0447617e10a74b4fa8cbf443c6316dd
+========
+guid: 80d2e1d3d0de4bc4d9121b54c8e84950
+>>>>>>>> stas-nps:Assets/Scripts/QuestSistem/QuestAdder.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
