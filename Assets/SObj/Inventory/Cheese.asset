@@ -17,3 +17,8 @@ MonoBehaviour:
   isDefaultItem: 0
   prefab: {fileID: 8230871683427317020, guid: 8173bba3ea1763c4b8c25dda6e7139d9, type: 3}
   ItemValue: 20
+<<<<<<< HEAD
+=======
+  armorCount: 0
+  healCount: 20
+>>>>>>> origin/test

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Script/Skin_1@Unarmed Jump.fbx.meta
 guid: d8f3c4b45d8a36c41abb4f8cc471f6d2
+========
+guid: ca79d2630f46a5344bdc5afc3b953783
+>>>>>>>> origin/test:Assets/TutorialInfo/Scripts/1H@CombatIdle01 (1).fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

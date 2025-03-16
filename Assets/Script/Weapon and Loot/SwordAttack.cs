@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
-    [SerializeField] private GameObject sword; // Перетяни сюда меч в инспекторе
+    [SerializeField] private GameObject sword;
     private Collider swordCollider;
     InventoryManager inventoryManager;
+    public WeaponSettings swordInfo;
 
     private void Start()
     {
@@ -42,7 +43,7 @@ public class SwordAttack : MonoBehaviour
             EnemyCharacter enemy = other.GetComponent<EnemyCharacter>();
             if (enemy != null)
             {
-                enemy.ClaimDamage(100);
+                enemy.ClaimDamage(swordInfo.Damage);
             }
         }
         

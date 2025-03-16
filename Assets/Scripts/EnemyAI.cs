@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour
             _target = PlayerManager.instance.player.transform;
         }
 
-        _agent.speed = _patrolSpeed;  // Начальная скорость патрулирования
+        _agent.speed = _patrolSpeed; 
     }
 
     void Update()
@@ -54,7 +54,8 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        _animator.SetBool("isDetect", distanceToPlayer <= _lookRadius);  // Анимация обнаружения
+        _animator.SetBool("isDetect", distanceToPlayer <= _lookRadius);  
+
     }
 
     void ChasePlayer(float distanceToPlayer)
@@ -65,15 +66,15 @@ public class EnemyAI : MonoBehaviour
         _agent.speed = _chaseSpeed;
         _agent.SetDestination(_target.position);
 
-        // Если враг близко к игроку, активируем боевую анимацию
+
         if (distanceToPlayer <= _agent.stoppingDistance + 0.5f)
         {
             _animator.SetBool("isFight", true);
-            _animator.SetBool("isDetect", false);  // Выключаем анимацию детекции
+            _animator.SetBool("isDetect", false);  
         }
         else
         {
-            _animator.SetBool("isFight", false);  // Включаем нормальное преследование
+            _animator.SetBool("isFight", false);  
         }
     }
 
@@ -99,7 +100,7 @@ public class EnemyAI : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<EnemyDropLoot>()?.DropLoot();
+        _agent.speed = 0;
         Destroy(gameObject);
     }
 }

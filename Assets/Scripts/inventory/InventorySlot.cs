@@ -3,11 +3,9 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    Item item;
+    private Item item;
     [SerializeField] private Image icon;
     public Button removeButton;
-
-    private void Start() { }
 
     public void AddItem(Item newItem)
     {
@@ -36,6 +34,7 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
+<<<<<<< HEAD
             if (item is Equipment equipment)
             {
                 EquipmentManager.Instance.Equip(equipment);
@@ -48,10 +47,18 @@ public class InventorySlot : MonoBehaviour
     }
 <<<<<<< HEAD
 =======
+=======
+           InventoryManager.Instance.SetHeldItem(item);
+        }
+    }
+>>>>>>> origin/test
 
     public bool ContainsItem(Item searchItem)
     {
         return item == searchItem;
     }
+<<<<<<< HEAD
 >>>>>>> d01ea85 (shop)
+=======
+>>>>>>> origin/test
 }

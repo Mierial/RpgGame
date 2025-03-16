@@ -14,6 +14,10 @@ public class MooveMeh : MonoBehaviour
 
     public InventoryUI inventoryUI;
     public BothItem sellItem;
+<<<<<<< HEAD
+=======
+    public EatFood eatfooding;
+>>>>>>> origin/test
 
     private Animator _animator;
     private Rigidbody m_rb;
@@ -79,6 +83,10 @@ public class MooveMeh : MonoBehaviour
     {
         bool isAttacking = Input.GetButton("Fire1") && !inventoryUI.InventoryUi.activeSelf && !sellItem.panel.activeSelf;
         _animator.SetBool("Attack", isAttacking);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/test
     }
 
     public void Dead()

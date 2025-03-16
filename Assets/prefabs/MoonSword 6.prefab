@@ -117,12 +117,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.13325995, y: 0.11908324, z: 0.095940545}
-  m_Center: {x: 0.00064172654, y: 0.7866754, z: -0.00000024819823}
+  m_Size: {x: 0.26769233, y: 0.4579889, z: 0.27498475}
+  m_Center: {x: -0.005159989, y: 0.95611787, z: 0.022819575}
 --- !u!114 &-7355681012543960200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 8355526836073403257}
+  swordInfo: {fileID: 11400000, guid: 51558875bb4060445bf55cf2f0fbca95, type: 2}

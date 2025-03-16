@@ -1,4 +1,5 @@
 using UnityEngine;
+<<<<<<< HEAD
 using System.Collections.Generic;
 
 public class EquipmentManager : MonoBehaviour
@@ -77,4 +78,12 @@ public class EquipmentManager : MonoBehaviour
             }
         }
     }
+=======
+using UnityEngine.UI;
+
+public class EquipmentManager : MonoBehaviour
+{
+    public Image[] images;
+
+>>>>>>> origin/test
 }

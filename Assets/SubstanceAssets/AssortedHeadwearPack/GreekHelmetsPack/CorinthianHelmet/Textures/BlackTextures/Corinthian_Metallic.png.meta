@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Metallic.png.meta
 guid: 69bff84a2c86e7443adf0f00f505fafc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
+========
+guid: 38136447547a70244b9f1b6eeca9a2e7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/Wood_basecolor.png.meta
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -20,10 +28,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,6 +72,11 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Metallic.png.meta
+========
+  swizzle: 50462976
+  cookieLightType: 0
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/Wood_basecolor.png.meta
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -73,8 +88,25 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Metallic.png.meta
+========
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/Wood_basecolor.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -88,9 +120,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -9,6 +9,13 @@ public class Item : ScriptableObject
     public bool isDefaultItem = false;
     public GameObject prefab;
     public int ItemValue;
+<<<<<<< HEAD
+=======
+    public int armorCount;
+    public int healCount;
+
+
+>>>>>>> origin/test
 
     public virtual void Use()
     {

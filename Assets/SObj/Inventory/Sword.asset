@@ -16,4 +16,9 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: c3aa7c3ea8a4719499cdae86e89b3981, type: 3}
   isDefaultItem: 0
   prefab: {fileID: 8355526836073403257, guid: b3da2ce305c5d9045a2dbe876dc5a3da, type: 3}
+<<<<<<< HEAD
   ItemValue: 200
+=======
+  ItemValue: 70
+  armorCount: 0
+>>>>>>> origin/test

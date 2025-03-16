@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     public int space = 20;
-
+    public List<InventorySlot> inventorySlots;
     public Item heldItem;
     public Transform handTransform;
 
@@ -108,6 +108,7 @@ public class InventoryManager : MonoBehaviour
         if (item != null)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Определяем, на каком расстоянии от игрока должен спауниться объект
             float dropDistance = 3f; // расстояние вперед
             float heightOffset = 2f; // смещение по оси Y для поднятия объекта
@@ -118,12 +119,14 @@ public class InventoryManager : MonoBehaviour
             float heightOffset = 2f;
 
 >>>>>>> d01ea85 (shop)
-            Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
+=======
+            float dropDistance = 3f;
+            float heightOffset = 2f;
 
-            // Спавним объект
+>>>>>>> origin/test
+            Vector3 dropPosition = handTransform.position + handTransform.forward * dropDistance + Vector3.up * heightOffset;
             GameObject droppedObject = Instantiate(item.prefab, dropPosition, Quaternion.identity);
 
-            // Настроим компоненты у сброшенного объекта
             ItemPickUp itemPickUp = droppedObject.GetComponent<ItemPickUp>();
             if (itemPickUp != null)
             {
@@ -143,7 +146,6 @@ public class InventoryManager : MonoBehaviour
                 rb.isKinematic = false;
             }
 
-            // Если в руке был объект, удаляем его
             if (heldObject != null)
             {
                 Destroy(heldObject);
@@ -152,9 +154,15 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void SellItem(Item item)
+    {
+        items.Remove(item);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/test
         if (heldItem == item)
         {
             Destroy(heldObject);
@@ -173,5 +181,9 @@ public class InventoryManager : MonoBehaviour
         }
         return null;
     }
+<<<<<<< HEAD
 >>>>>>> d01ea85 (shop)
+=======
+   
+>>>>>>> origin/test
 }

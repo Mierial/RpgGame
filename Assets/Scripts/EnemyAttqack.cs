@@ -4,18 +4,19 @@ using System.Collections;
 public class EnemyAttack : MonoBehaviour
 {
     public EnemyInfo golemData;
-    public Collider attackCollider; // Теперь задаем вручную в инспекторе
+    public Collider attackCollider;
 
     private void Start()
     {
         if (attackCollider == null)
         {
-            Debug.LogError("Коллайдер атаки не назначен!");
             return;
         }
 
-        attackCollider.enabled = false; // Отключаем по умолчанию
+        attackCollider.enabled = true;
+        attackCollider.isTrigger = true; 
     }
+
 
     public void EnableAttackCollider()
     {
@@ -38,14 +39,12 @@ public class EnemyAttack : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
         if (other.CompareTag("Player"))
         {
             CharacterHealth playerHealth = other.GetComponent<CharacterHealth>();
 
             if (playerHealth != null)
             {
-
                 playerHealth.TakeDamage(golemData.damage);
             }
         }
