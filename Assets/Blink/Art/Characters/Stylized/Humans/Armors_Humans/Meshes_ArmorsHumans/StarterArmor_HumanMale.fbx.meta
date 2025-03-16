@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx.meta
 guid: 55295a45c3d658c44b42c8e67983b8db
 ModelImporter:
   serializedVersion: 19301
@@ -6,6 +7,21 @@ ModelImporter:
   externalObjects: {}
   materials:
     materialImportMode: 1
+========
+guid: 6b33a5e700c865a49afb2eeccdfa6ad5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+>>>>>>>> origin/test:Assets/Mini Legion Grunt PBR HP Polyart/Mesh/Stage.fbx.meta
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -38,12 +54,18 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+<<<<<<<< HEAD:Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx.meta
     sortHierarchyByName: 1
+========
+>>>>>>>> origin/test:Assets/Mini Legion Grunt PBR HP Polyart/Mesh/Stage.fbx.meta
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+<<<<<<<< HEAD:Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx.meta
     fileIdsGeneration: 2
+========
+>>>>>>>> origin/test:Assets/Mini Legion Grunt PBR HP Polyart/Mesh/Stage.fbx.meta
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -68,8 +90,13 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+<<<<<<<< HEAD:Assets/Blink/Art/Characters/Stylized/Humans/Armors_Humans/Meshes_ArmorsHumans/StarterArmor_HumanMale.fbx.meta
   referencedClips: []
   importAnimation: 1
+========
+  importAnimation: 1
+  copyAvatar: 0
+>>>>>>>> origin/test:Assets/Mini Legion Grunt PBR HP Polyart/Mesh/Stage.fbx.meta
   humanDescription:
     serializedVersion: 3
     human: []
