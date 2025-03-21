@@ -1,9 +1,25 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+guid: ba8b29b9dcbaa054a882e61350478d3b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+========
+guid: 2a46d8d738b376c4faa59e855af035b0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/MushroomMan_01_Albedo.PNG.meta
+=======
 guid: 0c6db0d88664c7847a854ccc20f8dffd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Textures/Peasant Nolant Brown.png.meta
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -20,10 +36,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,7 +80,15 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+========
+  swizzle: 50462976
   cookieLightType: 0
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/MushroomMan_01_Albedo.PNG.meta
+=======
+  cookieLightType: 0
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Textures/Peasant Nolant Brown.png.meta
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,8 +100,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+<<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+========
+=======
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Textures/Peasant Nolant Brown.png.meta
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -86,8 +118,15 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD:Assets/SubstanceAssets/AssortedHeadwearPack/GreekHelmetsPack/CorinthianHelmet/Textures/BlackTextures/Corinthian_Height.png.meta
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>>> origin/test:Assets/MushroomMan/Texture/MushroomMan_01_Albedo.PNG.meta
+=======
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Textures/Peasant Nolant Brown.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -101,9 +140,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

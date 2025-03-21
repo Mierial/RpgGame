@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/inventory/Nps/PlayerAnimatorController.controller.meta
+<<<<<<<< HEAD:Assets/Scripts/inventory/Nps/PlayerAnimatorController.controller.meta
+guid: 897b0945e116e5642b9300982cb254ca
+========
+guid: 3ea77a7d3561622438385c64051b50cd
+>>>>>>>> origin/test:Assets/TutorialInfo/Scripts/PlayerAnimatorController.controller.meta
+=======
 guid: 0b5efae0122f76a408a303a8ae4eec58
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Animator/PlayerAnimatorController.controller.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

@@ -12,6 +12,16 @@ public class MooveMeh : MonoBehaviour
     [SerializeField] private float _jumpForse;
     [SerializeField] private float rotationSpeed;
 
+<<<<<<< HEAD:Assets/Script/Character/MooveMeh.cs
+    public InventoryUI inventoryUI;
+    public BothItem sellItem;
+<<<<<<< HEAD
+=======
+    public EatFood eatfooding;
+>>>>>>> origin/test
+
+=======
+>>>>>>> stas-nps:Assets/Scripts/Character/MooveMeh.cs
     private Animator _animator;
     private Rigidbody m_rb;
     private float _currentrotationY;
@@ -74,11 +84,20 @@ public class MooveMeh : MonoBehaviour
     }
     private void AttakPos()
     {
+<<<<<<< HEAD:Assets/Script/Character/MooveMeh.cs
+        bool isAttacking = Input.GetButton("Fire1") && !inventoryUI.InventoryUi.activeSelf && !sellItem.panel.activeSelf;
+        _animator.SetBool("Attack", isAttacking);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/test
+=======
         if (Input.GetButton("Fire1"))
         {
             _animator.SetBool("Attack", true);
         }
         else { _animator.SetBool("Attack", false); }
+>>>>>>> stas-nps:Assets/Scripts/Character/MooveMeh.cs
     }
     public void Dead()
     {

@@ -7,7 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Polytope Studio/Lowpoly_Demos/Armors_Free_Pack/Helpers/New Material.mat
+<<<<<<<< HEAD:Assets/Polytope Studio/Lowpoly_Demos/Armors_Free_Pack/Helpers/New Material.mat
+  m_Name: New Material
+========
+  m_Name: stand material
+>>>>>>>> origin/test:Assets/Crusader tank/stand/Materials/stand material.mat
+=======
   m_Name: Peasant Nolant Blue
+>>>>>>> stas-nps:Assets/NPS/Stylized NPC - Peasant Nolant/Materials/Peasant Nolant Blue.mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

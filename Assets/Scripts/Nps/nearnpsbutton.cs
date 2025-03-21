@@ -13,7 +13,15 @@ public class nearnpsbutton : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+<<<<<<< HEAD:Assets/Scripts/inventory/Nps/nearnpsbutton.cs
+<<<<<<< HEAD
+        if (other.CompareTag("Player")&& inventory.heldItem!=null)
+=======
         if (other.CompareTag("Player"))
+>>>>>>> origin/test
+=======
+        if (other.CompareTag("Player"))
+>>>>>>> stas-nps:Assets/Scripts/Nps/nearnpsbutton.cs
         {
             _button.gameObject.SetActive(true);
         }

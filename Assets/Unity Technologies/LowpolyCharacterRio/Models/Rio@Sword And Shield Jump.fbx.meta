@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/TutorialInfo/Scripts/1H@CombatIdle01 (1).fbx.meta
+<<<<<<<< HEAD:Assets/TutorialInfo/Scripts/1H@CombatIdle01 (1).fbx.meta
+guid: ca79d2630f46a5344bdc5afc3b953783
+========
+guid: d84ec28b227857f43be115fde77a0b86
+>>>>>>>> origin/test:Assets/TutorialInfo/Scripts/1H@Sprint01 (1).fbx.meta
+=======
 guid: e26f8ea7a9a613440abab42cc338d481
+>>>>>>> stas-nps:Assets/Unity Technologies/LowpolyCharacterRio/Models/Rio@Sword And Shield Jump.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

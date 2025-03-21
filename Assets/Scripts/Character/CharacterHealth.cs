@@ -6,6 +6,8 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private GameObject player;
     public HealthBar healthBar;
     private int currentHealth;
+    public ArmorBar armorBar;
+    private int currentArmor;
 
     private void Start()
     {
@@ -17,24 +19,37 @@ public class CharacterHealth : MonoBehaviour
         currentHealth = hero.Health;
         Debug.Log($"{currentHealth}");
         healthBar.SetHealth(currentHealth);
+
+        currentArmor = character.armor;
+        armorBar.SetHealth(currentArmor);
     }
+
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth < 0) currentHealth = 0;
+        if (currentArmor > 0)
+        {
+            int damageToArmor = Mathf.Min(damage, currentArmor);
+            currentArmor -= damageToArmor;
+            damage -= damageToArmor;
+            armorBar.SetHealth(currentArmor);
+        }
 
-        healthBar.SetHealth(currentHealth); 
-        Debug.Log("Игрок получил урон! Осталось HP: " + currentHealth);
-
+        if (damage > 0)
+        {
+            currentHealth -= damage;
+            if (currentHealth < 0) currentHealth = 0;
+            healthBar.SetHealth(currentHealth);
+        }
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+
     private void Die()
     {
-        Debug.Log(character.name + " погиб!");
+
     }
 }

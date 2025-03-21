@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animals/Stylized/Bear/Bear_Textures/Stylized_Bear_AO.png.meta
+guid: d20c619f0c064084c8f01a8434defbb5
+========
 guid: 70e433de46068504fa56fcf7f49b32b1
+>>>>>>>> stas-nps:Assets/Scripts/DialogueEditor/Assets/DefaultSprites/Blank.png.meta
 TextureImporter:
-  fileIDToRecycleName: {}
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -57,8 +61,9 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 64
     resizeAlgorithm: 0
@@ -80,17 +85,24 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Animals/Stylized/Bear/Bear_Textures/Stylized_Bear_AO.png.meta
+    spriteID: 
+    internalID: 0
+========
     spriteID: 046015285e21f3441a7323028f2b3803
+>>>>>>>> stas-nps:Assets/Scripts/DialogueEditor/Assets/DefaultSprites/Blank.png.meta
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/Skin_1@Unarmed Jump.fbx.meta
+<<<<<<<< HEAD:Assets/Script/Skin_1@Unarmed Jump.fbx.meta
+guid: f2e71217b8effcc4c9b6e2e39db70a49
+========
+guid: ca79d2630f46a5344bdc5afc3b953783
+>>>>>>>> origin/test:Assets/TutorialInfo/Scripts/1H@CombatIdle01 (1).fbx.meta
+=======
 guid: 32d82951cb1013a4e9161e3ee437b631
+>>>>>>> stas-nps:Assets/Unity Technologies/LowpolyCharacterRio/Models/MeleeWarrior@Death01.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

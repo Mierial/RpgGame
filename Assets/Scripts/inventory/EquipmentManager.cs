@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+using UnityEngine;
+<<<<<<< HEAD
+=======
 using System.Collections;
+>>>>>>> stas-nps
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,6 +58,16 @@ public class EquipmentManager : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
+=======
+using UnityEngine.UI;
+
+public class EquipmentManager : MonoBehaviour
+{
+    public Image[] images;
+
+>>>>>>> origin/test
+=======
 
     public void UnequipAll()
     {
@@ -69,4 +84,5 @@ public class EquipmentManager : MonoBehaviour
             UnequipAll();
         }
     }
+>>>>>>> stas-nps
 }

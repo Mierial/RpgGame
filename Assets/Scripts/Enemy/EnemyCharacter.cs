@@ -5,24 +5,15 @@ using UnityEngine;
 public class EnemyCharacter : MonoBehaviour
 {
     [SerializeField] private EnemyInfo EnemiInfo;
-    public int health;
+    private int health;
     private int damage;
     private int defense;
     private int maxHealth;
     EnemyDropLoot dropLoot;
 
-    private int Health
-    {
-        get { return health; }
-        set
-        {
-            if (value < 0) { health = 0; }
-            else if (value > maxHealth) { health = maxHealth; }
-            else { health = value; }
-        }
-    }
+   
 
-    public Animator animator; // Добавляем аниматор
+    public Animator animator; 
 
     private void Awake()
     {
@@ -39,8 +30,8 @@ public class EnemyCharacter : MonoBehaviour
     public void ClaimDamage(int damage)
     {
         int actualDamage = Mathf.Max(damage - defense, 0);
-        Health -= actualDamage;
-        if (health <= 0)
+        health -= actualDamage;
+        if (health <=0)
         {
             Die();
         }
@@ -57,6 +48,5 @@ public class EnemyCharacter : MonoBehaviour
     public void Died()
     {
         dropLoot.DropLoot();
-        Debug.Log("DropItem");
     }
 }

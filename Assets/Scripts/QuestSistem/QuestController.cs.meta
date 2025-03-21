@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Nps/PanelHide.cs.meta
+guid: bead7aeba3c41de488e64cf500fae62d
+========
 guid: b849595c471074d428d221c3fc5f516d
+>>>>>>>> stas-nps:Assets/Scripts/QuestSistem/QuestController.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

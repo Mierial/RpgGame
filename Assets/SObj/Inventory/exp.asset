@@ -15,5 +15,15 @@ MonoBehaviour:
   name: exp
   icon: {fileID: 0}
   isDefaultItem: 0
+<<<<<<< HEAD:Assets/SObj/Inventory/Cheese.asset
+  prefab: {fileID: 8230871683427317020, guid: 8173bba3ea1763c4b8c25dda6e7139d9, type: 3}
+  ItemValue: 20
+<<<<<<< HEAD
+=======
+  armorCount: 0
+  healCount: 20
+>>>>>>> origin/test
+=======
   prefab: {fileID: 8891009413819885484, guid: afaf221a0d237a64189f552316e77b1c, type: 3}
   ItemValue: 2
+>>>>>>> stas-nps:Assets/SObj/Inventory/exp.asset
