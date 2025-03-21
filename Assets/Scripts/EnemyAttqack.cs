@@ -20,12 +20,11 @@ public class EnemyAttack : MonoBehaviour
 
     public void EnableAttackCollider()
     {
-        StartCoroutine(ActivateTrigger());
+        ActivateTrigger();
     }
 
-    private IEnumerator ActivateTrigger()
+    private void ActivateTrigger()
     {
-        yield return new WaitForSeconds(0.1f); 
         attackCollider.enabled = true;
     }
 
@@ -46,6 +45,7 @@ public class EnemyAttack : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(golemData.damage);
+
             }
         }
     }

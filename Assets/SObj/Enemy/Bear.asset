@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aedab2e63f15546878fde0ca166c40, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
-  health: 250
+  health: 100
   damage: 70
   defence: 0
   maxHealth: 0

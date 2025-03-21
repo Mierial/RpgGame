@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class MooveMeh : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class MooveMeh : MonoBehaviour
     }
     private void FixedUpdate()
     {
+         
         _horizontal = Input.GetAxis(Horizontal);
         _vertical = Input.GetAxis(Vertical);
 
@@ -42,6 +44,7 @@ public class MooveMeh : MonoBehaviour
         GetAnim();
         GetJump();
         AttackPos();
+        _animator.SetBool("isEqquiped", isSwordInHand());
 
     }
     public void GetJump()
@@ -86,6 +89,10 @@ public class MooveMeh : MonoBehaviour
     public void Dead()
     {
         _animator.SetTrigger("Dead");
+    }
+    private bool isSwordInHand()
+    {
+        return InventoryManager.Instance.heldItem != null && InventoryManager.Instance.heldItem.name == "Sword";
     }
 
 }

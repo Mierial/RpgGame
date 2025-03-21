@@ -122,7 +122,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-
     public void SellItem(Item item)
     {
         items.Remove(item);
